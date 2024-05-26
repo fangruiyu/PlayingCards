@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21點遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>21點遊戲</h1>
+        <div class="rules">
+            <h2>玩法說明：</h2>
+            <p>1. 玩家拿兩張明牌，莊家（電腦）拿一張明牌。玩家可看到自己兩張牌牌面，與莊家一張牌面。</p>
+            <p>2. 2~10點的牌，以牌面的點數計算；J、Q、K每張為10點；A可記為1點或11點。</p>
+            <p>3. 玩家可加牌，以求越接近牌面點數總和21點，也可停止要牌，但點數超過21點即為「爆牌」，算莊家贏。</p>
+            <p>4. 玩家停止要牌且未爆牌後，換莊家加牌。莊家點數如不足17點，須加牌直至大於等於17點止。</p>
+            <p>5. 玩家未爆牌下，莊家爆牌算玩家贏；莊家未爆牌，看點數大者為贏。</p>
+        </div>
+        <div class="controls">
+            <button id="start">遊戲開始</button>
+        </div>
+        <div id="game" style="display:none;">
+            <div class="cards">
+                <div id="player">
+                    <h2>玩家的牌</h2>
+                    <div id="player-cards"></div>
+                    <p id="player-points">點數: 0</p>
+                </div>
+                <div id="banker">
+                    <h2>莊家的牌</h2>
+                    <div id="banker-cards"></div>
+                    <p id="banker-points">點數: 0</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="deal">發牌</button>
+                <button id="hit">加牌</button>
+                <button id="stand">停牌</button>
+                <button id="restart">重新開始</button>
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
